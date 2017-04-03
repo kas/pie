@@ -3,7 +3,7 @@
 ## Why Linked Lists?
 * Linked lists are easy/quick to implement
 * Little variation exists in implementations
-* (Requires) knowledge of how pointers and references work (if using C and C++)
+* Requires knowledge of how pointers and references work (if using C and C++)
 
 ## Kinds of Linked List
 * Singly linked lists (most common in interviews)
