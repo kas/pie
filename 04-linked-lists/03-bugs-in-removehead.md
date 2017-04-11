@@ -3,7 +3,9 @@
 ## Find and fix the bugs in the following function that is supposed to remove the head element from a singly linked list:
 
 `def remove_head(head):
+
 	del head
+	
 	head = head.next`
 
 ## Bug-finding strategy
