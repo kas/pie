@@ -2,11 +2,11 @@
 
 ## Find and fix the bugs in the following function that is supposed to remove the head element from a singly linked list:
 
-`def remove_head(head):
+	def remove_head(head):
 
-	del head
+		del head
 	
-	head = head.next`
+		head = head.next
 
 ## Bug-finding strategy
 * 1. Check that the data comes into the function properly.
