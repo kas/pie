@@ -11,10 +11,13 @@ class SinglyLinkedList:
 		self.head = Node(data, self.head)
 
 	def append(self, data):
-		curr_node = self.head
-		while curr_node.next:
-			curr_node = curr_node.next
-		curr_node.next = Node(data, None)
+		if not self.head:
+			self.head = Node(data)
+		else:
+			curr_node = self.head
+			while curr_node.next:
+				curr_node = curr_node.next
+			curr_node.next = Node(data, None)
 
 	def insert(self, data, pos):
 		c = 0
