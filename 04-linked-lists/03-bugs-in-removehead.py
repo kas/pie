@@ -15,4 +15,3 @@ def remove_head(head):
 		head = next
 
 # this code does not work in python3 :(
-
