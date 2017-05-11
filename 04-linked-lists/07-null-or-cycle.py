@@ -10,7 +10,7 @@ def is_cyclic(head):
     while True:
       if curr is None:
         return False
-      # If the fast pointer moves onto or over the slow pointer
+      # if the fast pointer moves onto or over the slow pointer
       if curr == curr_lagging:
         return True
         
