@@ -86,3 +86,54 @@
 * We can obtain the largest element by following all the right children
 * The nodes can be printed out, in order, in O(n) time
 * Given a node, we can find the next highest node in O(log(n)) time
+* Many tree operations can be implemented recursively. The recursive implementation may not be the most efficient, but it's usually the best place to start.
+
+## Heaps
+* Heaps are trees (usually binary trees) where (in a max-heap) each child of a node has a value less than or equal to the node's own value.
+  * (In a min-heap, each child is greater than or equal to its parent.)
+* The root node always has the largest value in the tree, which means that we can find the maximum value in constant time.
+* Insertion and deletion are still O(log(n)), but lookup becomes O(n).
+* If extracting the max value needs to be fast, use a heap.
+
+## Common Searches
+* Two common search algorithms exist to accomplish the task of searching a tree without ordering.
+
+### Breadth-first Search (BFS)
+* Starting with the root, we move left to right across the second level, then move left to right across the third level, and so forth.
+* Uses additional memory because it is necessary to track the child nodes for all nodes on a given level while searching that level.
+* Use BFS if our node is likely to be in the upper levels of the tree (BFS always examines the lowest level last).
+
+### Depth-First Search (DFS)
+* Follows one branch of the tree down as many levels as possible until the target node is found or the end is reached. When the search can't go down any farther, it is continued at the nearest ancestor with unexplored children.
+* Has much lower memory requirements than BFS because it is not necessary to store all the child pointers at each level.
+* Use DFS if our node is likely to be in the lower levels of the tree (DFS doesn't examine any single level last).
+
+## Traversals
+* Just like a search, except that instead of stopping when we find a particular target node, we visit every node in the tree.
+  * Often this is used to perform some operation on each node in the tree.
+* These classes of traversals can also apply to nonbinary trees as long as we have a way to classify whether a child is "less than" (on the left of) or "greater than" (on the right of) its parent node.
+* Recursion is usually the simplest way to implement a depth-first traversal.
+* If we're asked to implement a traversal, recursion is a good way to start thinking about the problem.
+
+### Preorder
+* Performs the operation first on the node itself, then on its left descendants, and finally on its right descendents.
+  * A node is always visited before any of its children.
+
+### Inorder
+* Performs the operation first on the node's left descendants, then on the node itself, and finally on its right descendants.
+  * The left subtree is visited first, then the node itself, and then the node's right subtree.
+
+### Postorder
+* Performs the operation first on the node's left descendants, then on the node's right descendants, and finally on the node itself.
+  * A node is always visited after its children.
+
+## Graphs
+* More general, more complex than trees.
+* Like trees, they consist of nodes with children.
+  * A tree is a special case of a graph.
+* Unlike tree nodes, graph nodes (or vertices) can have multiple "parents," possibly creating a loop (a cycle).
+* The links between nodes, as well as the nodes themselves, may have values or weights.
+  * These links are called edges because they may contain more information than just a pointer.
+* In a graph, edges can be one-way or two-way.
+  * A graph with one-way edges is called a directed graph.
+  * A graph with only two-way pointers is called an undirected graph.
