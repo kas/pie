@@ -137,3 +137,10 @@
 * In a graph, edges can be one-way or two-way.
   * A graph with one-way edges is called a directed graph.
   * A graph with only two-way pointers is called an undirected graph.
+* One common graph data structure representation is by including adjacency lists for each node.
+  * A list of references to other nodes with which the node shares edges.
+* Another graph representation is an adjacency matrix.
+  * A square matrix with dimension equal to the number of nodes.
+    * The matrix element at position i,j represents the number of edges extending from node i to node j.
+* All the types of searches possible in trees have analogs in graphs.
+  * The graph equivalents are usually slightly more complex due to the possibility of cycles.
